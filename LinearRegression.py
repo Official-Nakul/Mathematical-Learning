@@ -11,7 +11,7 @@ class LinearRegression:
         self.__y_mean = 0
 
     def __compute_covariance(self, x, y):
-        self.__covariance_sum = np.sum((x - self.__x_mean * y - self.__y_mean))
+        self.__covariance_sum = np.sum((x - self.__x_mean) * (y - self.__y_mean))
         """
         same as above 
         for i, j in zip(x, y):
@@ -19,7 +19,7 @@ class LinearRegression:
         """
 
     def __compute_variance(self, x):
-        self.__covariance_sum = np.sum((x - self.__x_mean) ** 2)
+        self.__variance_sum = np.sum((x - self.__x_mean) ** 2)
         """
         same as above 
                 for i in x:
